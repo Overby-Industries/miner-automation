@@ -1,4 +1,4 @@
-# 🌌 Overby Industries Code of Conduct
+# Overby Industries Code of Conduct
 
 ## Our Pledge
 We, as members, contributors, and leaders of **Overby Industries**, pledge to make our community a harassment‑free experience for everyone.  
@@ -15,18 +15,18 @@ And where all interactions are guided by **our mission of sustainability and eth
 ## Our Standards
 Examples of positive behavior that contributes to a healthy community:
 
-- 🚀 Respectful, inclusive language  
-- 🛰 Constructive feedback and thoughtful discourse  
-- 🌍 Recognizing the value and limits of others’ expertise  
-- 🧑‍🚀 Patience with newcomers and mentoring others when possible  
-- ♻️ Considering the impact of our work on collaborators, communities, and environments  
+- Respectful, inclusive language  
+- Constructive feedback and thoughtful discourse  
+- Recognizing the value and limits of others’ expertise  
+- Patience with newcomers and mentoring others when possible  
+- Considering the impact of our work on collaborators, communities, and environments  
 
 Unacceptable behavior includes:
 
-- ❌ Harassment, insults, discrimination, or derogatory comments  
-- ❌ Trolling, flaming, or deliberately derailing discussions  
-- ❌ Sharing of private/protected info without consent  
-- ❌ Dismissing, invalidating, or silencing other contributors  
+- Harassment, insults, discrimination, or derogatory comments  
+- Trolling, flaming, or deliberately derailing discussions  
+- Sharing of private/protected info without consent  
+- Dismissing, invalidating, or silencing other contributors  
 
 ---
 
@@ -50,7 +50,7 @@ This code applies to all Overby Industries spaces:
 ## Enforcement
 Instances of misconduct can be reported to:
 
-📧 **founder@overbyindustries.space**
+**founder@overbyindustries.space**
 
 All reports will be reviewed and treated with **confidentiality**.  
 
@@ -76,4 +76,4 @@ This Code of Conduct is adapted from the [Contributor Covenant](https://www.cont
 
 ---
 
-**💫 Together we are not just building spacecraft and miners, we are building the culture of tomorrow.**
+**Together we are not just building spacecraft and miners, we are building the culture of tomorrow.**

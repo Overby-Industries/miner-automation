@@ -18,7 +18,26 @@
 #define WDT_KICK() wdt_reset()
 #elif defined(ARDUINO_ARCH_ESP32)
 #include <esp_task_wdt.h>
+#if defined(ESP_ARDUINO_VERSION_MAJOR) && ESP_ARDUINO_VERSION_MAJOR >= 3
+// Arduino-ESP32 3.x (ESP-IDF 5) replaced esp_task_wdt_init(timeout_s, panic)
+// with one that takes a config struct, and the core has already initialised
+// the task watchdog before setup() runs, so reconfigure it instead. Same
+// settings as the old call: an 8 s timeout that panics on expiry; the idle
+// mask keeps the core's default of watching core 0's idle task only.
+static void esp32WdtSetup() {
+  esp_task_wdt_config_t cfg;
+  cfg.timeout_ms = 8000;
+  cfg.idle_core_mask = 1;
+  cfg.trigger_panic = true;
+  esp_task_wdt_reconfigure(&cfg);
+}
+#define WDT_SETUP() esp32WdtSetup()
+#else
 #define WDT_SETUP() esp_task_wdt_init(8, true)
+#endif
+// Note (unchanged behaviour): loop() is not subscribed to the task watchdog
+// (that takes esp_task_wdt_add(NULL), or enableLoopWDT() in the Arduino core),
+// so on ESP32 this reset is a no-op and only the timeout above is configured.
 #define WDT_KICK() esp_task_wdt_reset()
 #else
 #define WDT_SETUP()

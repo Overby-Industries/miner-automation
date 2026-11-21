@@ -90,3 +90,7 @@ and controlled-environment agriculture folks are all useful here.
 ## License
 
 [Apache 2.0](LICENSE).
+
+## Fleet telemetry
+
+`firmware/lib/miner_pod_fsm/MinerPodTelemetry.h` emits an OTF-1 `status` packet from `MinerPodState` (Fault reports `mode: safe`) and maps pod state to the OTF-1 `ack.reason` for coordinator offers (Idle accepts; otherwise `busy` or `safe-mode`). Header-only, integer-only, so it builds on Uno/ESP32/native. Note: written without a C++ toolchain available; CI (`pio test -e native`) is its first compile.
